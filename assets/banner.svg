@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1220"/>
+      <stop offset="55%" stop-color="#0f1e33"/>
+      <stop offset="100%" stop-color="#132a44"/>
+    </linearGradient>
+    <linearGradient id="disc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="45%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <radialGradient id="hole" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1220"/>
+      <stop offset="100%" stop-color="#16324f"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="drive" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0c1c2e"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- ambient glow behind disc -->
+  <circle cx="960" cy="175" r="230" fill="url(#glow)"/>
+
+  <!-- background grid lines for tech feel -->
+  <g stroke="#1e3a5f" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="1150" y1="0" x2="1150" y2="360"/>
+  </g>
+
+  <!-- faint circuitry paths -->
+  <g stroke="#2a5a86" stroke-width="2" fill="none" opacity="0.55">
+    <path d="M 60 300 L 130 300 L 150 280 L 220 280"/>
+    <path d="M 60 260 L 100 260 L 120 240 L 260 240"/>
+    <circle cx="130" cy="300" r="4" fill="#38bdf8"/>
+    <circle cx="220" cy="280" r="4" fill="#38bdf8"/>
+    <circle cx="260" cy="240" r="4" fill="#38bdf8"/>
+  </g>
+
+  <!-- orbit rings around disc -->
+  <circle cx="960" cy="175" r="150" fill="none" stroke="#2c5a82" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="960" cy="175" r="185" fill="none" stroke="#22415f" stroke-width="1" opacity="0.4"/>
+
+  <!-- stylized optical disc / ISO -->
+  <g>
+    <circle cx="960" cy="175" r="115" fill="url(#disc)"/>
+    <circle cx="960" cy="175" r="115" fill="none" stroke="#0891b2" stroke-width="2" opacity="0.6"/>
+    <circle cx="960" cy="175" r="88" fill="none" stroke="#0a1220" stroke-width="2" opacity="0.35"/>
+    <circle cx="960" cy="175" r="60" fill="none" stroke="#0a1220" stroke-width="2" opacity="0.3"/>
+    <path d="M 855 175 A 115 115 0 0 1 960 60" fill="none" stroke="url(#sheen)" stroke-width="18" opacity="0.7"/>
+    <circle cx="960" cy="175" r="34" fill="url(#hole)"/>
+    <circle cx="960" cy="175" r="34" fill="none" stroke="#0891b2" stroke-width="2"/>
+  </g>
+
+  <!-- virtual drive slot beneath disc -->
+  <g>
+    <rect x="845" y="300" width="230" height="16" rx="4" fill="url(#drive)" stroke="#2c5a82" stroke-width="1.5"/>
+    <rect x="900" y="304" width="120" height="4" rx="2" fill="#38bdf8" opacity="0.8"/>
+  </g>
+
+  <!-- small mount arrow indicating "mount" motion -->
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" opacity="0.85">
+    <path d="M 960 265 L 960 288" stroke-linecap="round"/>
+    <path d="M 948 278 L 960 292 L 972 278" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- decorative small discs floating -->
+  <circle cx="1105" cy="90" r="20" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.5"/>
+  <circle cx="1105" cy="90" r="6" fill="#38bdf8" opacity="0.5"/>
+  <circle cx="820" cy="70" r="14" fill="none" stroke="#7dd3fc" stroke-width="2" opacity="0.4"/>
+
+  <!-- Headline -->
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="#f1f9ff" textLength="700" lengthAdjust="spacingAndGlyphs">ISO Mounter</text>
+  <text x="60" y="228" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="#38bdf8" textLength="380" lengthAdjust="spacingAndGlyphs">Portable</text>
+
+  <!-- Tagline -->
+  <text x="60" y="272" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#a9c4de" textLength="700" lengthAdjust="spacingAndGlyphs">Mount and unmount ISO images instantly with built-in</text>
+  <text x="60" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#a9c4de" textLength="560" lengthAdjust="spacingAndGlyphs">virtual drive support — single binary</text>
+</svg>
